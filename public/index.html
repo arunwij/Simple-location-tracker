@@ -7,16 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Location Tracker</h1>
     <div>
-        <button type="buton" onclick="clearWatch()">Stop Location Tracking</button>
-        <button type="button" onclick="downloadCSV()">Download CSV</button>
+        <button type="buton" onclick="clearWatch()" class="btn btn-danger">Stop Location Tracking</button>
+        <button type="button" onclick="downloadCSV()" class="btn btn-primary">Download CSV</button>
     </div>
     <div id="error">
     </div>
     <div id="location">
+            
     </div>
+    <!-- <table class="table table-striped">
+        <thead>
+            <tr>
+            <th>Time</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            </tr>
+        </thead>
+        <tbody id="table-content">
+            
+        </tbody>
+    </table> -->
 </body>
 </html>

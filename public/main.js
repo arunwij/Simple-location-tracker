@@ -1,5 +1,6 @@
 var watchId = null;
 var readings = [];
+var table = document.getElementById("table-content");
 
 function getCoordinates() {
     if (navigator.geolocation) {
@@ -23,7 +24,16 @@ function currentPosition(pos) {
         Latitude: pos.coords.latitude,
         Longitude: pos.coords.longitude
     });
-    document.getElementById("location").innerHTML = "<br /> Latitude: " + pos.coords.latitude + "<br/>" + "Longitude: " + pos.coords.longitude + "<br/>" + "Timestamp: " + pos.timestamp;
+
+    // document.getElementById("table-content").appendChild(
+    //     "<tr>" +
+    //         "<td>"+getTimeFromTimestamp(pos.timestamp)+"</td>"+
+    //         "<td>"+pos.coords.latitude+"</td>"+
+    //         "<td>"+pos.coords.longitude+"</td>"+
+    //     "</tr>"
+    // );
+
+    document.getElementById("location").innerHTML = "<br /> Latitude: " + pos.coords.latitude + "<br/>" + "Longitude: " + pos.coords.longitude + "<br/>" + "Time: " + getTimeFromTimestamp(pos.timestamp);
 }
 
 function error_callback(err) {
